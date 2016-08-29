@@ -1,5 +1,8 @@
 package ru.sbt.cacheproxy.service;
 
+import ru.sbt.cacheproxy.proxy.Cache;
+import ru.sbt.cacheproxy.proxy.CacheType;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -26,7 +29,12 @@ public class ServiceImpl implements Service {
     }
 
     @Override
-    public Object work(int id) {
+    public String work(int id) {
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException("InterruptedException" ,e);
+        }
         return "smth";
     }
 }

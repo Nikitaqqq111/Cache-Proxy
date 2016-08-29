@@ -9,10 +9,11 @@ import java.util.List;
  * Created by Никита on 28.08.2016.
  */
 public interface Service {
-    @Cache(fileNamePrefix = "smth", identityBy = {int.class, double.class}, maxSizeOfList = 3)
+
+    @Cache(fileNamePrefix = "smth", identityBy = {String.class, double.class}, maxSizeOfList = 3)
     List<Object> run(String name, int amount, boolean isSmth);
 
     @Cache(cacheType = CacheType.FILE, zip = true, maxSizeOfList = 2)
-    Object work(int id);
+    String work(int id);
 
 }

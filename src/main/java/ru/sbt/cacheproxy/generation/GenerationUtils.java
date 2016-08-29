@@ -15,14 +15,13 @@ public class GenerationUtils {
 
     public static Object[] getIdentityArguments(Method method, Object[] args) {
         if (method.getAnnotation(Cache.class).identityBy().length == 0) return args;
-        Object[] identityArgs = null;
-        int i = -1;
+        List<Object> identityArgs = new ArrayList<>();
         for (Object arg : args) {
             if (asList(method.getAnnotation(Cache.class).identityBy()).contains(arg.getClass())) {
-                identityArgs[++i] = arg;
+                identityArgs.add(arg);
             }
         }
-        return identityArgs;
+        return identityArgs.toArray();
     }
 
     public static String generateFileName(Method method, Object[] args, String rootPath) {
