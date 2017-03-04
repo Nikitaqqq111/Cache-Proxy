@@ -14,6 +14,8 @@ public class SerializationUtilsTest {
 //        SerializationUtils.serialize(new Integer(4), "src\\test\\resources\\Integer.ser");
     }
 
+    
+
     @Test
     public void serialize() throws Exception {
 //        SerializationUtils.serialize(new String("StringSerializable"), "src\\test\\resources\\String.ser");
