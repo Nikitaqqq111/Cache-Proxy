@@ -31,6 +31,9 @@ public class SerializationUtilsTest {
 //        SerializationUtils.deserialize("src\\test\\resources\\FileNotFound.ser");
     }
 
+
+
+    
     @Test
     public void zipFile() throws Exception {
 //        SerializationUtils.zipFile("src\\test\\resources\\Integer.ser");
