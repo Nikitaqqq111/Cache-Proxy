@@ -4,11 +4,11 @@
 
     <groupId>ru.sbt.javaschool</groupId>
     <artifactId>cache-proxy</artifactId>
-    <version>1.2-SNAPSHOT</version>
+    <version>1.2</version>
 
     <scm>
         <developerConnection>scm:git:https://github.com/Nikitaqqq111/Cache-Proxy.git</developerConnection>
-        <tag>HEAD</tag>
+        <tag>cache-proxy-1.2</tag>
     </scm>
 
     <build>
